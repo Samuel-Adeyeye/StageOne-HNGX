@@ -8,6 +8,7 @@ export const getProfileDetails = (
   const { slack_name } = req.query;
   const { track } = req.query;
 
+//  Get the current UTC time
 const currentUTC = new Date();
 const currentDateTime = currentUTC.toISOString();
 
@@ -22,7 +23,7 @@ const currentDayOfWeek = daysOfWeek[currentUTC.getUTCDay()];
     current_day: currentDayOfWeek,
     utc_time: currentDateTime,
     track: track,
-    github_file_url: ``,
+    github_file_url: `https://github.com/Samuel-Adeyeye/StageOne-HNGX/blob/main/src/app.ts`,
     github_repo_url: `https://github.com/Samuel-Adeyeye/StageOne-HNGX`,
     status_code: 200,
   };
