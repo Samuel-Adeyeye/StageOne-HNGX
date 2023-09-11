@@ -4,6 +4,7 @@ exports.getProfileDetails = void 0;
 const getProfileDetails = (req, res, next) => {
     const { slack_name } = req.query;
     const { track } = req.query;
+    //  Get the current UTC time
     const currentUTC = new Date();
     const currentDateTime = currentUTC.toISOString();
     // Get the current day of the week
@@ -14,7 +15,7 @@ const getProfileDetails = (req, res, next) => {
         current_day: currentDayOfWeek,
         utc_time: currentDateTime,
         track: track,
-        github_file_url: ``,
+        github_file_url: `https://github.com/Samuel-Adeyeye/StageOne-HNGX/blob/main/src/app.ts`,
         github_repo_url: `https://github.com/Samuel-Adeyeye/StageOne-HNGX`,
         status_code: 200,
     };
